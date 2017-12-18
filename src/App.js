@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from './Nav';
 import Section from './Section';
 import Welcome from './Welcome';
+import Menu from './menu';
 
 // navbar
 // welcome
@@ -24,6 +25,7 @@ const sections = [
   },
   {
     title: 'Menu',
+    content: <Menu />
   },
   {
     title: 'Events',
@@ -42,7 +44,7 @@ class App extends Component {
       <div className="App">
         <Navbar sections={sections} colorStyle="navbar-inverse" />
         <div className="container">
-          <div className="jumbotron">
+          <div className="banner">
             <img
               src="https://cdn.images.express.co.uk/img/dynamic/1/590x/secondary/Beer-price-UK-pubs-goes-up-6p-pint-801398.jpg"
               className="img-responsive"
