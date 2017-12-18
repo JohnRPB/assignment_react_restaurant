@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css'
+import './Nav';
 
 // navbar
 // welcome
@@ -11,28 +12,12 @@ import 'bootstrap/dist/css/bootstrap.css'
 // contact
 // VIP
 
+const sections = ['Welcome', 'Reservations', 'Menu', 'Events', 'Contacts', 'VIP']
 
 
-const Navbar = () => (
- <nav role="navigation" class="navbar navbar-default navbar-inverse">
-  <div class="container-fluid navbar-inverse">
-    <div class="navbar-header navbar-inverse">
-      <a class="navbar-brand" href="#">Odin's Mead</a>
-    </div>
-     <ul class="nav navbar-nav navbar-inverse">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#Welcome">Welcome</a></li>
-      <li><a href="#Reservations">Reservations</a></li>
-      <li><a href="#Menu">Menu</a></li>
-      <li><a href="#Events">Events</a></li>
-      <li><a href="#Contacts">Contact</a></li>
-      <li><a href="#VIP">VIP</a></li>
-    </ul>  
-  </div>
-</nav> 
-);
 
-const Section = ({id, child}) => (
+
+const Section = ({id}) => (
   <section id={id}>
     <a name={id}></a>
     <h1>{id}</h1>
