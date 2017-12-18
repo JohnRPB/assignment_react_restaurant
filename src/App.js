@@ -32,24 +32,28 @@ const Navbar = () => (
 
 );
 
-const Section = ({id}) => (
-  <Section id={id}>
+const NavSection = ({id, child}) => (
+  <section id={id}>
     <a name={id}></a>
-  </Section>
+    {child}
+  </section>
 )
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <Navbar className="navbar navbar-inverse"/>
-
-        <Section id="Welcome" />
-        <Section id="Reservations" />
-        <Section id="Menu" />
-        <Section id="Events" />
-        <Section id="Contact" />
-        <Section id="VIP" />
+        <div id="banner">
+          <img src="https://cdn.images.express.co.uk/img/dynamic/1/590x/secondary/Beer-price-UK-pubs-goes-up-6p-pint-801398.jpg"/>
+        </div>
+        <NavSection id="Welcome" />
+        <NavSection id="Reservations" />
+        <NavSection id="Menu" />
+        <NavSection id="Events" />
+        <NavSection id="Contact" />
+        <NavSection id="VIP" />
       </div>
 
     );
