@@ -1,39 +1,37 @@
-import React, { Component } from "react";
+import React, {Component} from 'react';
 
-const NavbarItem = ({ section, active }) => {
-	let activeState = "";
+const NavbarItem = ({section, active}) => {
+  let activeState = '';
 
-	if (active) {
-		activeState = "active";
-	}
+  if (active) {
+    activeState = 'active';
+  }
 
-	return (
-		<li className={activeState}>
-			<a href=`#${section}`>{section}</a>
-		</li>
-	);
+  return (
+    <li className={activeState}>
+      <a href={`#${section.title}`}>{section.title}</a>
+    </li>
+  );
 };
 
-const Navbar = ({ sections }) => {
-	return (
-		<nav role="navigation" classNameName="navbar navbar-inverse">
-			<div className="container-fluid navbar-inverse">
-				<div className="navbar-header navbar-inverse">
-					<a className="navbar-brand" href="#">
-						Odin&#39s Mead
-					</a>
-				</div>
-				<ul className="nav navbar-nav navbar-inverse"> 
-				<NavbarItem section="Home" active=true/>
-				sections.map(section=>{
-					<NavbarItem section=`${section}`/>
-
-
-				})
-				</ul>
-			</div>
-		</nav>
-	);
+const Navbar = ({sections, colorStyle}) => {
+  return (
+    <nav role="navigation" className={`navbar ${colorStyle}`}>
+      <div className="container-fluid">
+        <div className="navbar-header">
+          <a className="navbar-brand" href="#">
+            Odin's Mead
+          </a>
+        </div>
+        <ul className="nav navbar-nav navbar-inverse">
+          <NavbarItem section={{title:'Home'}} active={true} />
+          {sections.map(section => {
+            return <NavbarItem section={section} />;
+          })}
+        </ul>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;

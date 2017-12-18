@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 
-const Section = ({ id }) => (
+const Section = ({id, child}) => (
 	<section id={id}>
 		<a name={id}> </a>
 		<h1>{id}</h1>
-		{child}
+    <div className="container">
+    {child}
+    </div>
 	</section>
 );
 
-
-export default 
+export default Section;

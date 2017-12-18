@@ -31,11 +31,15 @@
   background-color:#111111;
 }
 
-#banner img {
+.jumbotron img {
   display: block;
   margin: 0 auto;
+
 }
 
+.jumbotron {
+  background-color:#181818 !important;
+}
 Section {
   margin-top: 5%;
   color:#d6dbdb
